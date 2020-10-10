@@ -6,10 +6,12 @@ class SingletonEager {
     private static int count;
     private static int count2;
 
+    //call every time when 'new' keyword is use to create new object
     {
         count++;
     }
 
+    // use only one at loading class to JVM
     static {
         count2++;
     }
