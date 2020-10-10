@@ -5,7 +5,7 @@ class Main {
     public static void main(String[] args) {
         ScheduleRoom scheduleRoom_1
                 = new ScheduleRoom.ScheduleRoomBuilder(8, 16)
-                        .build();
+                .build();
 
         ScheduleRoom scheduleRoom_2 = new ScheduleRoom.ScheduleRoomBuilder(8, 11)
                 .addFlipBoard()
@@ -26,6 +26,15 @@ class Main {
 
         System.out.println(pc1.about());
         System.out.println(pc2);
+
+        Sandwich sandwich = new Sandwich.SandwichBuilder()
+                .breadType("graham")
+                .cheese(false)
+                .hamType("salami")
+                .ketchup(false)
+                .build();
+
+        System.out.println(sandwich);
 
     }
 
