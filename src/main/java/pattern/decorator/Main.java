@@ -6,13 +6,18 @@ class Main {
 
         Room partyRoom = new PartyRoomDecorator(basicScheduleRoom);
         Room escapeRoom = new EscapeRoomDecorator(basicScheduleRoom);
-        
-        Room partyEscapeRoom = new PartyRoomDecorator(escapeRoom);
-        
+
+        Room partyEscapeRoom =
+                new PartyRoomDecorator(
+                        new EscapeRoomDecorator(
+                                new BasicRoomDecorator(
+                                        new ScheduleRoom()
+                                )));
+
         partyRoom.meeting();
         System.out.println("*******************************");
         escapeRoom.meeting();
-   
+
         System.out.println("*******************************");
         partyEscapeRoom.meeting();
     }

@@ -10,6 +10,9 @@ class ScheduleRoom implements Room {
     private boolean projector;
     private String projectorType;
 
+    public ScheduleRoom() {
+    }
+
     private ScheduleRoom(ScheduleRoomBuilder builder) {
         this.startTime = builder.startTime;
         this.endTime = builder.endTime;
