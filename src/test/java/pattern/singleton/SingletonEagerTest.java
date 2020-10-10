@@ -1,8 +1,9 @@
 package pattern.singleton;
 
+import org.junit.jupiter.api.Test;
 
-import org.junit.Assert;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class SingletonEagerTest {
 
@@ -11,8 +12,8 @@ public class SingletonEagerTest {
         SingletonEager first = SingletonEager.getInstance();
         SingletonEager second = SingletonEager.getInstance();
 
-        Assert.assertTrue(first == second);
-        Assert.assertEquals(first, second);
+        assertTrue(first == second);
+        assertEquals(first, second);
     }
 
     @Test
@@ -22,8 +23,8 @@ public class SingletonEagerTest {
 
         int expectedCount = 1;
 
-        Assert.assertEquals(expectedCount, first.getCount());
-        Assert.assertEquals(expectedCount, second.getCount());
+        assertEquals(expectedCount, first.getCount());
+        assertEquals(expectedCount, second.getCount());
     }
 
 }
