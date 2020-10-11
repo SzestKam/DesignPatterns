@@ -1,4 +1,4 @@
-package pattern.factory;
+package pattern.factory.computer;
 
 import java.util.LinkedList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package pattern.factory;
+package pattern.factory.computer;
 
 class Main {
     public static void main(String[] args) {
@@ -6,6 +6,7 @@ class Main {
         Computer homePc = FactoryComputer.makeComputer('H');
         Computer raspberryPi = FactoryComputer.makeComputer('P');
         Computer server = FactoryComputer.makeComputer('S');
+        Computer laptop = FactoryComputer.makeComputer('L');
 
 
         System.out.println("Configuration:");
@@ -14,7 +15,9 @@ class Main {
         System.out.println(raspberryPi);
         System.out.println("Configuration:");
         System.out.println(server);
-        
+        System.out.println("Configuration:");
+        System.out.println(laptop);
+ /*
         ColorFactory cf = new ColorFactory();
         ShapeFactory sf = new ShapeFactory();
         
@@ -25,6 +28,6 @@ class Main {
         
         System.out.println("SHAPES");
         System.out.println(sf.getShape("C"));
-        System.out.println(sf.getColor("W"));
+        System.out.println(sf.getColor("W"));*/
     }
 }

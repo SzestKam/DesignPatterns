@@ -1,4 +1,4 @@
-package pattern.factory;
+package pattern.factory.computer;
 
 class FactoryComputer {
 
@@ -18,6 +18,12 @@ class FactoryComputer {
             case 'S': {
                 return new HomeComputer("10TB", "128GB",
                         "Xenon 8gen x32", "VGA", "").build();
+            }
+
+            case 'L' : {
+                Laptop laptop = new Laptop("512GB SSD", "16GB", "AMD Razen 5");
+                laptop.attachDockingStation();
+                return laptop;
             }
         }
         return null;
